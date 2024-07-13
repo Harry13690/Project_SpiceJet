@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utilities.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Run in Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.Booking">
+                <methods>
+                    <include name="bookingFlight"/>
+                </methods>
+            </class>
+            <class name="tests.FlightDetails">
+                <methods>
+                    <include name="checkIn"/>
+                    <include name="flightStatus"/>
+                    <include name="manageBooking"/>
+                </methods>
+            </class>
+            <class name="tests.Login">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin1"/>
+                    <include name="invalidLogin2"/>
+                    <include name="invalidLogin3"/>
+                </methods>
+            </class>
+            <class name="tests.SearchFlight">
+                <methods>
+                    <include name="toSearchFlight1"/>
+                    <include name="toSearchFlight2"/>
+                </methods>
+            </class>
+            <class name="tests.SelectFlight">
+                <methods>
+                    <include name="selectFlight"/>
+                </methods>
+            </class>
+            <class name="tests.SignUp">
+                <methods>
+                    <include name="creatingAcc"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Run in Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.Booking">
+                <methods>
+                    <include name="bookingFlight"/>
+                </methods>
+            </class>
+            <class name="tests.FlightDetails">
+                <methods>
+                    <include name="checkIn"/>
+                    <include name="flightStatus"/>
+                    <include name="manageBooking"/>
+                </methods>
+            </class>
+            <class name="tests.Login">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin1"/>
+                    <include name="invalidLogin2"/>
+                    <include name="invalidLogin3"/>
+                </methods>
+            </class>
+            <class name="tests.SearchFlight">
+                <methods>
+                    <include name="toSearchFlight1"/>
+                    <include name="toSearchFlight2"/>
+                </methods>
+            </class>
+            <class name="tests.SelectFlight">
+                <methods>
+                    <include name="selectFlight"/>
+                </methods>
+            </class>
+            <class name="tests.SignUp">
+                <methods>
+                    <include name="creatingAcc"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
